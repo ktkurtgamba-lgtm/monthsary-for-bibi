@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For BB 💗 | 6th Monthsary</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#f58ab5;--blue:#78cbea;--dark:#6b4962;--white:#fffafd}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:var(--dark);background:linear-gradient(135deg,#ffe0ed,#def5ff);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#fff 0 3%,transparent 4%),radial-gradient(circle at 80% 70%,#fff 0 2%,transparent 3%);opacity:.35;pointer-events:none}
+.hidden{display:none!important}
+button{font:inherit}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:25px}
+.panel{width:min(900px,94vw);background:#ffffffd9;backdrop-filter:blur(12px);border-radius:30px;padding:35px 24px;box-shadow:0 15px 45px #8b668022}
+h1{font-size:clamp(38px,10vw,70px);color:var(--pink);line-height:1.05}
+h2{color:#e66e9e;margin-bottom:14px}
+p{line-height:1.8}
+.center{text-align:center}
+.small{letter-spacing:3px;color:#5daaca;font-weight:bold;font-size:12px}
+.btn{border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(90deg,var(--pink),var(--blue));color:white;font-weight:bold;cursor:pointer;box-shadow:0 7px 18px #8b668025;transition:.25s}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+input{width:100%;padding:13px 16px;border:2px solid #f3b5cf;border-radius:15px;outline:0;margin:12px 0;background:#fff}
+#lockMsg{color:#d8588b;margin-top:8px;min-height:20px}
+.envelope{font-size:90px;animation:bob 2s infinite ease-in-out;cursor:pointer}
+@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}
+nav{position:sticky;top:0;z-index:10;background:#ffffffd9;backdrop-filter:blur(12px);padding:12px;text-align:center;box-shadow:0 3px 18px #0000000c}
+nav a{color:#6b4962;text-decoration:none;margin:0 7px;font-size:13px;font-weight:bold}
+main{max-width:950px;margin:auto;padding:20px 14px}
+section{margin:25px 0}
+.card{background:#ffffffdc;border-radius:26px;padding:28px 20px;box-shadow:0 10px 30px #8b668020}
+.hero{text-align:center;padding:55px 15px}
+.badge{display:inline-block;background:#fff;border-radius:999px;padding:8px 14px;color:#5daaca;font-weight:bold;margin-bottom:15px}
+.letter{background:#fff7fb;border-left:5px solid var(--pink);padding:20px;border-radius:16px;white-space:pre-line}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.memory{background:#fff;border-radius:20px;padding:12px}
+.memory img{width:100%;height:210px;object-fit:cover;border-radius:15px;background:#e9f7ff}
+.memory h3{margin:10px 0 4px;color:#e66e9e}
+.tip{font-size:13px;color:#8b7785;margin-top:8px}
+.question{background:linear-gradient(90deg,#fff2f8,#edfaff);border-radius:17px;padding:17px;margin:10px 0;cursor:pointer}
+.answer{display:none;color:#5a9fbd;margin-top:9px}
+.timeline{border-left:3px solid var(--blue);padding-left:20px}
+.event{margin:0 0 24px;position:relative}
+.event:before{content:"💗";position:absolute;left:-35px;background:white;border-radius:50%;padding:2px}
+.secret{background:linear-gradient(135deg,#ffdce9,#dcf5ff);padding:25px;border-radius:22px;margin-top:20px;display:none}
+#site{display:none}
+.float{position:fixed;bottom:-30px;z-index:0;pointer-events:none;animation:rise 8s linear infinite;opacity:.55}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+footer{text-align:center;padding:40px 15px}
+.edit{color:#999;font-style:italic}
+</style>
+</head>
+<body>
+
+<div id="lockScreen" class="screen">
+  <div class="panel center">
+    <div class="envelope" onclick="focusPass()">💌</div>
+    <div class="small">A LITTLE SURPRISE FOR</div>
+    <h1>BB 🩷</h1>
+    <p>May maliit akong ginawa para sa'yo.<br>Enter the secret word to open it. 🩵</p>
+    <input id="password" type="password" placeholder="Secret word..." onkeydown="if(event.key==='Enter')unlock()">
+    <button class="btn" onclick="unlock()">Open My Gift 💗</button>
+    <div id="lockMsg"></div>
+    <p class="tip">EDIT HERE: Change the secret word in the JavaScript below.</p>
+  </div>
+</div>
+
+<div id="site">
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#letter">LETTER</a>
+  <a href="#memories">MEMORIES</a>
+  <a href="#questions">QUESTIONS</a>
+  <a href="#six">6 THINGS</a>
+  <a href="#surprise">SURPRISE</a>
+</nav>
+
+<main>
+<section id="home" class="hero card">
+  <div class="badge">6 MONTHS OF US 🩷🩵</div>
+  <h1>Happy 6th Monthsary, BB! 💗</h1>
+  <p>Six months of little moments, laughs, conversations, memories, and everything in between.</p>
+  <br>
+  <button class="btn" onclick="document.getElementById('letter').scrollIntoView()">Read My Letter 💌</button>
+</section>
+
+<section id="letter" class="card">
+  <h2>💌 A Letter For BB</h2>
+  <div class="letter">EDIT HERE:
+
+Dear BB,
+
+Happy 6th Monthsary to us! 🥹💗
+
+I just want you to know how much I appreciate you. Thank you for all the little things you do and for making these six months special.
+
+WRITE YOUR PERSONAL LETTER HERE.
+
+I love and appreciate you so much, BB. 🩷
+
+Love,
+YOUR NAME</div>
+</section>
+
+<section id="memories" class="card">
+  <h2>📸 Our Memories</h2>
+  <p class="edit">Replace the image filenames and captions below with your own.</p><br>
+  <div class="grid">
+    <div class="memory"><img src="YOUR-IMAGE-1.jpg"><h3>Our Beginning</h3><p>EDIT HERE — caption.</p></div>
+    <div class="memory"><img src="YOUR-IMAGE-2.jpg"><h3>Favorite Moment</h3><p>EDIT HERE — caption.</p></div>
+    <div class="memory"><img src="YOUR-IMAGE-3.jpg"><h3>Another Memory</h3><p>EDIT HERE — caption.</p></div>
+  </div>
+</section>
+
+<section id="questions" class="card">
+  <h2>❓ Little Questions For BB</h2>
+  <p>Tap a question to reveal the message.</p>
+  <div class="question" onclick="toggle(1)">💗 What is your favorite memory with me?<div id="a1" class="answer">EDIT HERE — Your answer/message.</div></div>
+  <div class="question" onclick="toggle(2)">🩵 What do you want us to do together someday?<div id="a2" class="answer">EDIT HERE — Your answer/message.</div></div>
+  <div class="question" onclick="toggle(3)">🥹 What was your first impression of me?<div id="a3" class="answer">EDIT HERE — Your answer/message.</div></div>
+  <div class="question" onclick="toggle(4)">💕 What is one thing you love about us?<div id="a4" class="answer">EDIT HERE — Your answer/message.</div></div>
+</section>
+
+<section id="six" class="card">
+  <h2>💗 6 Things I Love About Us</h2>
+  <div class="grid">
+    <div class="memory"><h3>01 🩷</h3><p>EDIT HERE</p></div>
+    <div class="memory"><h3>02 🩵</h3><p>EDIT HERE</p></div>
+    <div class="memory"><h3>03 🩷</h3><p>EDIT HERE</p></div>
+    <div class="memory"><h3>04 🩵</h3><p>EDIT HERE</p></div>
+    <div class="memory"><h3>05 🩷</h3><p>EDIT HERE</p></div>
+    <div class="memory"><h3>06 🩵</h3><p>EDIT HERE</p></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>🫶 Our Little Timeline</h2>
+  <div class="timeline">
+    <div class="event"><h3>The Beginning 💗</h3><p>EDIT HERE — How it started.</p></div>
+    <div class="event"><h3>Month 1 🩵</h3><p>EDIT HERE — Favorite moment.</p></div>
+    <div class="event"><h3>Month 3 💗</h3><p>EDIT HERE — Favorite moment.</p></div>
+    <div class="event"><h3>Month 6 🩵</h3><p>EDIT HERE — Your message.</p></div>
+  </div>
+</section>
+
+<section id="surprise" class="card center">
+  <h2>🎁 One Last Surprise</h2>
+  <p>May last message pa ako for you...</p><br>
+  <button class="btn" onclick="reveal()">Click Me 💗</button>
+  <div id="secret" class="secret">
+    <h2>💗 Surprise! 🩵</h2>
+    <p>EDIT HERE: Put your most special secret message here.</p><br>
+    <p><b>Happy 6th Monthsary, BB! 🥹💗</b></p>
+  </div>
+</section>
+</main>
+
+<footer>Made with lots of love for BB 💗🩵<br>Happy 6th Monthsary!</footer>
+</div>
+
+<script>
+/* ================================
+   EDIT HERE: SECRET PASSWORD
+   ================================ */
+const SECRET_WORD = "BB";
+
+function focusPass(){document.getElementById("password").focus()}
+
+function unlock(){
+  const value=document.getElementById("password").value.trim();
+  const msg=document.getElementById("lockMsg");
+  if(value.toLowerCase()===SECRET_WORD.toLowerCase()){
+    document.getElementById("lockScreen").style.display="none";
+    document.getElementById("site").style.display="block";
+    window.scrollTo(0,0);
+  }else{
+    msg.textContent="Hmm... try again, BB 💗";
+  }
+}
+
+function toggle(n){
+  const el=document.getElementById("a"+n);
+  el.style.display=el.style.display==="block"?"none":"block";
+}
+
+function reveal(){
+  document.getElementById("secret").style.display="block";
+  document.getElementById("secret").scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+for(let i=0;i<18;i++){
+  const h=document.createElement("div");
+  h.className="float";
+  h.textContent=i%2?"♡":"♥";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(16+Math.random()*22)+"px";
+  h.style.animationDelay=(Math.random()*7)+"s";
+  h.style.animationDuration=(6+Math.random()*5)+"s";
+  h.style.color=i%2?"#78cbea":"#f58ab5";
+  document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
